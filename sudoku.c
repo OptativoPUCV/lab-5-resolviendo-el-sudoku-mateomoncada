@@ -67,7 +67,7 @@ int is_valid(Node* n){
       }
     }
     for(int k = 0 ; k < 9 ; k++){
-      for(int i = 1 : i <= 9 ; i++) seen[i] = 0;
+      for(int i = 1 ; i <= 9 ; i++) seen[i] = 0;
       for (int p = 0 ; p < 9 ; p++){
         int x = 3 * (k/3) + (p/3);
         int y = 3 * (k%3) + (p%3);
@@ -76,16 +76,7 @@ int is_valid(Node* n){
         if(seen[valor]) return 0;
         seen[valor] = 1;
       }
-
-    
     }
-    }
-    
-  
-
-
-    
-
     return 1;
   }
 
