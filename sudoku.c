@@ -103,6 +103,19 @@ Node* DFS(Node* initial, int* cont){
     Node* current = first(stack);
     popFront(stack);
     (*cont)++;
+
+    if (is_final(current)) {
+      return current;
+    }
+    if(is_valid(current)){
+      List* adj = get_adj_nodes(current);
+      Node* adjNode = first(adj);
+
+      while(adjNode){
+        pushFront(stack, adjNode);
+        adjNode = next(adj);
+      }
+    }
   }
   return NULL;
 }
