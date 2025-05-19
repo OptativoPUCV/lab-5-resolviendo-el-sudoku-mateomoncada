@@ -65,12 +65,29 @@ int is_valid(Node* n){
         if(seen[valor] == 1) return 0;
         seen[valor] = 1;
       }
+    }
+    for(int k = 0 ; k < 9 ; k++){
+      for(int i = 1 : i <= 9 ; i++) seen[i] = 0;
+      for (int p = 0 ; p < 9 ; p++){
+        int x = 3 * (k/3) + (p/3);
+        int y = 3 * (k%3) + (p%3);
+        int valor = n->sudo[x][y];
+        if(valor == 0) continue;
+        if(seen[valor]) return 0;
+        seen[valor] = 1;
+      }
+
+    
+    }
+    }
+    
+  
 
 
     
 
     return 1;
-}
+  }
 
 
 List* get_adj_nodes(Node* n){
