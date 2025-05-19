@@ -66,3 +66,71 @@ test.c:245:5: error: 'main' defined but not used [-Werror=unused-function]
      ^~~~
 cc1.exe: all warnings being treated as errors
 3f0e54c
+Sun, May 18, 2025  9:47:20 PM: 
+ sudoku.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:0:
+sudoku.c: In function 'is_valid':
+sudoku.c:49:13: error: expected '=', ',', ';', 'asm' or '__attribute__' before '.' token
+   for(int i ./= 0 ; i < 9 ; i++){
+             ^
+sudoku.c:49:21: error: 'i' undeclared (first use in this function)
+   for(int i ./= 0 ; i < 9 ; i++){
+                     ^
+sudoku.c:49:21: note: each undeclared identifier is reported only once for each function it appears in
+sudoku.c:60:5: error: implicit declaration of function 'fir' [-Werror=implicit-function-declaration]
+     fir(int j = 0 ; j < 9 ; j++){
+     ^~~
+sudoku.c:60:9: error: expected expression before 'int'
+     fir(int j = 0 ; j < 9 ; j++){
+         ^~~
+sudoku.c:60:33: error: expected ';' before '{' token
+     fir(int j = 0 ; j < 9 ; j++){
+                                 ^
+test.c: In function 'adj_test1':
+test.c:62:17: error: implicit declaration of function 'get_adj_nodes' [-Werror=implicit-function-declaration]
+     List* adj = get_adj_nodes(initial);
+                 ^~~~~~~~~~~~~
+test.c:62:17: error: initialization makes pointer from integer without a cast [-Werror=int-conversion]
+test.c:76:17: error: 'msg' undeclared (first use in this function)
+         sprintf(msg, "primer nodo %d %d %d... (deberia ser 5 3 1...)",aux->sudo[0][0],aux->sudo[0][1],aux->sudo[0][2]);
+                 ^~~
+test.c:95:9: error: assignment makes pointer from integer without a cast [-Werror=int-conversion]
+     adj = get_adj_nodes(initial);
+         ^
+test.c: In function 'test_mod_adj':
+test.c:155:17: error: initialization makes pointer from integer without a cast [-Werror=int-conversion]
+     List* adj = get_adj_nodes(initial);
+                 ^~~~~~~~~~~~~
+test.c:157:17: error: 'msg' undeclared (first use in this function)
+         sprintf(msg,"la lista deberia tener tamanno 3 pero tiene tamanno %d",get_size(adj));
+                 ^~~
+test.c: In function 'test_isfinal':
+test.c:180:8: error: implicit declaration of function 'is_final' [-Werror=implicit-function-declaration]
+     if(is_final(initial)){
+        ^~~~~~~~
+test.c: In function 'test_dfs':
+test.c:206:19: error: implicit declaration of function 'DFS' [-Werror=implicit-function-declaration]
+     Node* final = DFS(initial, &cont);
+                   ^~~
+test.c:206:19: error: initialization makes pointer from integer without a cast [-Werror=int-conversion]
+test.c:230:11: error: assignment makes pointer from integer without a cast [-Werror=int-conversion]
+     final = DFS(initial, &cont);
+           ^
+test.c: In function 'is_valid':
+test.c:245:5: error: 'main' is normally a non-static function [-Werror=main]
+ int main( int argc, char *argv[] ) {
+     ^~~~
+test.c:262:1: error: expected declaration or statement at end of input
+ }
+ ^
+test.c:262:1: error: control reaches end of non-void function [-Werror=return-type]
+ }
+ ^
+At top level:
+test.c:245:5: error: 'main' defined but not used [-Werror=unused-function]
+ int main( int argc, char *argv[] ) {
+     ^~~~
+cc1.exe: all warnings being treated as errors
+a011c09

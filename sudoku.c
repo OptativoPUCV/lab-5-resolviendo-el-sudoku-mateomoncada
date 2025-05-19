@@ -46,7 +46,7 @@ void print_node(Node* n){
 int is_valid(Node* n){
   int seen[10];
 
-  for(int = 0 ; i < 9 ; i++){
+  for(int i ./= 0 ; i < 9 ; i++){
     for(int k = 0 ; k < 9 ; k++) seen[k] = 0;
     for(int j = 0 ; j < 9 ; j++){
       int valor = n->sudo[i][j];
@@ -65,7 +65,7 @@ int is_valid(Node* n){
         if(seen[valor] == 1) return 0;
         seen[valor] = 1;
       }
-      
+
 
     
 
