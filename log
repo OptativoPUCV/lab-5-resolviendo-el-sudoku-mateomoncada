@@ -376,3 +376,9 @@ sudoku.c:102:20: error: 'j' undeclared (first use in this function)
        new->sudo[i][j] = val + 1;
                     ^
 aa9c615
+Sun, May 18, 2025 10:23:23 PM: 
+ sudoku.c | 5 +++--
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+ tests:  1|4
+total_score: 10/70
+60b1f91
