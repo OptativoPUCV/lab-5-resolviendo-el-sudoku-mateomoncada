@@ -94,6 +94,18 @@ List* get_adj_nodes(Node* n){
         }
       }
     }
+
+    if(!found) return list;
+
+    for(int val = 0 ; val < 9 ; val++){
+      Node* new = copy(n);
+      new->sudo[i][j] = val + 1;
+      if(is_valid(new)){
+        pushBack(list, new);
+      }else{
+        free(new);
+      }
+    }
     return list;
 }
 

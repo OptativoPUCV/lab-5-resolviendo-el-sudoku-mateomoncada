@@ -362,3 +362,17 @@ Sun, May 18, 2025 10:21:24 PM:
  tests:  1|4
 total_score: 10/70
 15691d6
+Sun, May 18, 2025 10:22:40 PM: 
+ sudoku.c | 12 ++++++++++++
+ 1 file changed, 12 insertions(+)
+Compilation failed
+In file included from test.c:5:0:
+sudoku.c: In function 'get_adj_nodes':
+sudoku.c:102:17: error: 'i' undeclared (first use in this function)
+       new->sudo[i][j] = val + 1;
+                 ^
+sudoku.c:102:17: note: each undeclared identifier is reported only once for each function it appears in
+sudoku.c:102:20: error: 'j' undeclared (first use in this function)
+       new->sudo[i][j] = val + 1;
+                    ^
+aa9c615
